@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Spanzuratoare</title>
+  </head>
+  <body>
+    <h1>The word to be guessed:</h1>
+    <input type="text" id="inputWord">
+    <button onclick="addWordToHangman()">Save the word</button>
+    <h5>Which letters do you think are in this word?</h5>
+    <input type="text" id="inputSearchLetter">
+    <button onclick="searchLettersInWord()">Search the letter in the word</button>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      var hangmanLifes = 15;
+      var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+      function addWordToHangman() {
+        word = document.getElementById("inputWord").value; //pt. ca nu ii dau un tip de date variabilei, se declara automat globala
+        //alert("cuvantul din functia 1= " + word);
+      }
+
+      function searchLettersInWord() {
+        //alert("cuvantul din functia 2= " + word);
+        var letter = document.getElementById("inputSearchLetter").value;
+        alert("litera cautata in cuvant= " + letter);
+        for (var i = 0; i < word.length; ++i) {
+         alert("literele cuvantului= " + word[i]);
+         //document.write(word[i]);
+         //window.alert("literele cuvantului= " + word[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
