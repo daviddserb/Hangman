@@ -17,7 +17,7 @@ function searchLettersInWord() {
   if (alphabet.includes(letter)) {
     for (var i = 0; i < alphabet.length; ++i) {
       if (alphabet[i] == letter) {
-          alphabet.splice(i, 1); //sterg litera, din alfabet, litera care s-a folosit
+          alphabet.splice(i, 1); //sterg litera folosita din alfabet
       }
     }
     for (var i = 0; i < word.length; ++i) { //parcurg literele cuvantului
